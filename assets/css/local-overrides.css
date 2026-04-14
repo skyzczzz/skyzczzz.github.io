@@ -1,0 +1,180 @@
+:root {
+  --global-theme-color: #8756c2;
+  --global-hover-color: #6f3fa8;
+}
+
+.nav-right-list {
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.container {
+  max-width: 1000px;
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.68;
+}
+
+.z-depth-1 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.page-intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.page-intro-copy {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.intro-profile {
+  width: min(30%, 280px);
+  flex: 0 0 auto;
+}
+
+.page-intro .post-header {
+  margin-bottom: 0.15rem;
+}
+
+.page-intro .post-title {
+  font-size: 3rem;
+  line-height: 1.08;
+  margin-bottom: 0.3rem;
+}
+
+.page-intro .desc {
+  color: var(--global-text-color-light);
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.intro-lead {
+  max-width: 40rem;
+  margin: 0.8rem 0 0.9rem;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--global-text-color-light);
+}
+
+.bio-copy {
+  max-width: none;
+}
+
+.news .table-responsive {
+  max-height: 20vw;
+}
+
+.news-page-table {
+  max-height: none !important;
+}
+
+.publications ol.bibliography li .preview {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.publications img.preview {
+  width: 100%;
+  aspect-ratio: 49 / 38;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.social .contact-icons {
+  font-size: 2.4rem;
+}
+
+.social .contact-icons a {
+  margin: 0 0.2rem;
+}
+
+.social .contact-note {
+  margin-top: 0.5rem;
+}
+
+.social-top {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.1rem;
+}
+
+.social-top .contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.45rem;
+}
+
+.social-top .contact-icons a {
+  margin: 0;
+}
+
+.social-top .contact-note {
+  margin-top: 0;
+  font-size: 0.92rem;
+}
+
+.social-top .contact-note a {
+  color: var(--global-text-color-light);
+}
+
+.social-top .contact-note a:hover {
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  margin-left: 0.25rem;
+}
+
+@media (max-width: 576px) {
+  .page-intro {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro-profile {
+    width: min(240px, 72%);
+    align-self: center;
+  }
+
+  .page-intro .post-title {
+    font-size: 2.45rem;
+  }
+
+  .intro-lead {
+    margin: 0.6rem 0 0.8rem;
+    font-size: 1rem;
+  }
+
+  .nav-right-list {
+    gap: 0.6rem;
+  }
+
+  .news .table-responsive {
+    max-height: none;
+  }
+
+  .social-top {
+    gap: 0.6rem;
+  }
+}
