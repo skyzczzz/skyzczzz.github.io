@@ -1,128 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>news | Chi Zhang</title>
-    <meta name="description" content="News and updates for Chi Zhang." />
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/css/academicons.min.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"
-    />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/local-overrides.css" />
-    <script>
-      (() => {
-        try {
-          if (localStorage.getItem("theme") === "dark") {
-            document.documentElement.setAttribute("data-theme", "dark");
-          }
-        } catch (error) {
-        }
-      })();
-    </script>
-  </head>
-  <body class="fixed-top-nav">
-    <header>
-      <nav id="navbar" class="navbar navbar-light fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-collapse text-right">
-            <ul class="navbar-nav ml-auto flex-nowrap nav-right-list">
-              <li class="nav-item">
-                <a class="nav-link" href="/">about</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/publications/">publications</a>
-              </li>
-              <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
-                  <i class="fa-solid fa-moon"></i>
-                  <i class="fa-solid fa-sun"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Chi Zhang</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f8f6f1;
+      --ink: #26221d;
+      --muted: #766d62;
+      --line: #ded6ca;
+      --link: #6f42c1;
+    }
 
-    <div class="container mt-5" role="main">
-      <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">news</h1>
-        </header>
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #171514;
+        --ink: #f4efe7;
+        --muted: #b8ad9f;
+        --line: #37302a;
+        --link: #b999ff;
+      }
+    }
 
-        <article>
-          <div class="news">
-            <div class="table-responsive news-page-table">
-              <table class="table table-sm table-borderless">
-                <tr>
-                  <th scope="row" style="width: 20%">Jun 2026</th>
-                  <td>
-                    Our paper
-                    <a href="https://arxiv.org/abs/2602.20360" rel="external nofollow noopener" target="_blank">Momentum Guidance: Plug-and-Play Guidance for Flow Models</a>
-                    was accepted to <strong>ECCV 2026</strong>.
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" style="width: 20%">May 2026</th>
-                  <td>
-                    Graduated from <strong>UT Austin</strong> with an M.S. in Computer Science.
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" style="width: 20%">Mar 2026</th>
-                  <td>
-                    <a href="https://openreview.net/submissions?venue=ICLR.cc%2F2026%2FWorkshop%2FGEM" rel="external nofollow noopener" target="_blank">Folding scFv--Antigen Complexes at Scale</a>
-                    appears in the ICLR 2026 GEM workshop submissions.
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" style="width: 20%">Mar 2026</th>
-                  <td>
-                    My first-author paper
-                    <a href="https://arxiv.org/abs/2603.22216" rel="external nofollow noopener" target="_blank">Gumbel Distillation for Parallel Text Generation</a>
-                    was accepted to <strong>ICLR 2026</strong>.
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" style="width: 20%">Jan 2026</th>
-                  <td>
-                    My first-author paper
-                    <a href="http://arxiv.org/abs/2601.19202" rel="external nofollow noopener" target="_blank">Do Images Speak Louder than Words?</a>
-                    was accepted to the <strong>EACL 2026 main conference</strong>.
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" style="width: 20%">Fall 2025</th>
-                  <td>
-                    Served as a teaching assistant for <strong>CS 371R: Information Retrieval and Web Search</strong> at UT Austin.
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" style="width: 20%">Aug 2024</th>
-                  <td>
-                    Started my M.S. study in Computer Science at <strong>UT Austin</strong>.
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
+    * {
+      box-sizing: border-box;
+    }
 
-    <footer class="fixed-bottom" role="contentinfo">
-      <div class="container mt-0">
-        © Copyright 2026 Chi Zhang. Based on the
-        <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="external nofollow noopener">al-folio</a>
-        theme and adapted as a local static draft.
-      </div>
-    </footer>
-    <script defer src="../assets/js/theme-toggle.js"></script>
-  </body>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: ui-serif, Georgia, "Times New Roman", serif;
+      line-height: 1.55;
+    }
+
+    main {
+      width: min(680px, calc(100vw - 48px));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 42px 0 46px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      font-size: 1.12rem;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Chi Zhang</h1>
+    <p>This personal website is temporarily offline.</p>
+    <p>Please check back later, or reach me through my <a href="https://scholar.google.com/citations?user=5JMU5XkAAAAJ&hl=en">Google Scholar profile</a>.</p>
+  </main>
+</body>
 </html>

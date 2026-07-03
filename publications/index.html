@@ -1,183 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>publications | Chi Zhang</title>
-    <meta
-      name="description"
-      content="Publications by Chi Zhang."
-    />
-    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../assets/css/academicons.min.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"
-    />
-    <link rel="stylesheet" href="../assets/css/main.css" />
-    <link rel="stylesheet" href="../assets/css/local-overrides.css" />
-    <script>
-      (() => {
-        try {
-          if (localStorage.getItem("theme") === "dark") {
-            document.documentElement.setAttribute("data-theme", "dark");
-          }
-        } catch (error) {
-        }
-      })();
-    </script>
-  </head>
-  <body class="fixed-top-nav">
-    <header>
-      <nav id="navbar" class="navbar navbar-light fixed-top" role="navigation">
-        <div class="container">
-          <div class="navbar-collapse text-right">
-            <ul class="navbar-nav ml-auto flex-nowrap nav-right-list">
-              <li class="nav-item">
-                <a class="nav-link" href="/">about</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="/publications/">publications <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
-                  <i class="fa-solid fa-moon"></i>
-                  <i class="fa-solid fa-sun"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Chi Zhang</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f8f6f1;
+      --ink: #26221d;
+      --muted: #766d62;
+      --line: #ded6ca;
+      --link: #6f42c1;
+    }
 
-    <div class="container mt-5" role="main">
-      <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">publications</h1>
-        </header>
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #171514;
+        --ink: #f4efe7;
+        --muted: #b8ad9f;
+        --line: #37302a;
+        --link: #b999ff;
+      }
+    }
 
-        <article>
-          <div class="publications">
-            <h2 class="bibliography"><span>2026</span></h2>
-            <ol class="bibliography">
-              <li>
-                <div class="row">
-                  <div class="col-sm-2 preview">
-                    <figure><img src="../assets/img/publication_preview/scfv-paper.png" class="preview z-depth-1 rounded" width="100%" height="auto" alt="scFv publication preview" /></figure>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="title">Folding scFv--Antigen Complexes at Scale</div>
-                    <div class="author">
-                      Ravi Shah, Jeffrey Ouyang-Zhang, Zachary Cohen, Maria Rosaria Briglia, <strong>Chi Zhang</strong>, Adam Klivans, and Daniel Jesus Diaz
-                    </div>
-                    <div class="periodical"><em>ICLR 2026 Workshop on Generative and Experimental Perspectives for Biomolecular Design</em>, 2026</div>
-                    <div class="links">
-                      <a href="https://openreview.net/submissions?venue=ICLR.cc%2F2026%2FWorkshop%2FGEM" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">OpenReview</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-sm-2 preview">
-                    <figure><img src="../assets/img/publication_preview/gumbel.png" class="preview z-depth-1 rounded" width="100%" height="auto" alt="Gumbel publication preview" /></figure>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="title">Gumbel Distillation for Parallel Text Generation</div>
-                    <div class="author"><strong>Chi Zhang</strong>, X. Hu, B. Liu, and Q. Liu</div>
-                    <div class="periodical"><em>ICLR</em>, 2026</div>
-                    <div class="links">
-                      <a href="https://arxiv.org/abs/2603.22216" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
-                      <a href="https://github.com/hxixixh/gumbel-distill" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">[code]</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-sm-2 preview">
-                    <figure><img src="../assets/img/publication_preview/context-vqa.png" class="preview z-depth-1 rounded" width="100%" height="auto" alt="Context-VQA publication preview" /></figure>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="title">Do Images Speak Louder than Words? Investigating the Effect of Textual Misinformation in Vision-Language Models</div>
-                    <div class="author"><strong>Chi Zhang</strong>, W. Ding, J. Liu, M. Wu, Q. Wu, and R. Mooney</div>
-                    <div class="periodical"><em>EACL Main</em>, 2026</div>
-                    <div class="links">
-                      <a href="http://arxiv.org/abs/2601.19202" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="row">
-                  <div class="col-sm-2 preview">
-                    <figure><img src="../assets/img/publication_preview/momentum-paper.png" class="preview z-depth-1 rounded" width="100%" height="auto" alt="Momentum publication preview" /></figure>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="title">Momentum Guidance: Plug-and-Play Guidance for Flow Models</div>
-                    <div class="author">R. Liao, J. Yu, B. Su, <strong>Chi Zhang</strong>, L. Chen, and Q. Liu</div>
-                    <div class="periodical"><em>ECCV</em>, 2026</div>
-                    <div class="links">
-                      <a href="https://arxiv.org/abs/2602.20360" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ol>
+    * {
+      box-sizing: border-box;
+    }
 
-            <h2 class="bibliography"><span>2025</span></h2>
-            <ol class="bibliography">
-              <li>
-                <div class="row">
-                  <div class="col-sm-2 preview">
-                    <figure><img src="../assets/img/publication_preview/dom.png" class="preview z-depth-1 rounded" width="100%" height="auto" alt="Divide Optimize Merge publication preview" /></figure>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="title">Divide, Optimize, Merge: Fine-Grained LLM Agent Optimization at Scale</div>
-                    <div class="author">J. Liu, Y. Zeng, S. Zhang, <strong>Chi Zhang</strong>, M. Højmark-Bertelsen, M. N. Gadeberg, H. Wang, and Q. Wu</div>
-                    <div class="periodical"><em>EMNLP Findings</em>, 2025</div>
-                    <div class="links">
-                      <a href="https://arxiv.org/abs/2505.03973" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ol>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: ui-serif, Georgia, "Times New Roman", serif;
+      line-height: 1.55;
+    }
 
-            <h2 class="bibliography"><span>2024</span></h2>
-            <ol class="bibliography">
-              <li>
-                <div class="row">
-                  <div class="col-sm-2 preview">
-                    <figure><img src="../assets/img/publication_preview/candle.png" class="preview z-depth-1 rounded" width="100%" height="auto" alt="CANDLE publication preview" /></figure>
-                  </div>
-                  <div class="col-sm-8">
-                    <div class="title">Efficient and Long-tailed Generalization for Pre-trained Vision-Language Model</div>
-                    <div class="author">J. X. Shi*, <strong>Chi Zhang*</strong>, T. Wei, and Y. F. Li</div>
-                    <div class="periodical"><em>ACM KDD</em>, 2024</div>
-                    <div class="links">
-                      <a href="https://arxiv.org/pdf/2406.12638" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
-                      <a href="https://github.com/shijxcs/Candle" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">[code]</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </article>
-      </div>
-    </div>
+    main {
+      width: min(680px, calc(100vw - 48px));
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 42px 0 46px;
+    }
 
-    <footer class="fixed-bottom" role="contentinfo">
-      <div class="container mt-0">
-        © Copyright 2026 Chi Zhang. Based on the
-        <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="external nofollow noopener">al-folio</a>
-        theme and adapted as a local static draft.
-      </div>
-    </footer>
-    <script defer src="../assets/js/theme-toggle.js"></script>
-  </body>
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      font-size: 1.12rem;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration-thickness: 0.08em;
+      text-underline-offset: 0.18em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Chi Zhang</h1>
+    <p>This personal website is temporarily offline.</p>
+    <p>Please check back later, or reach me through my <a href="https://scholar.google.com/citations?user=5JMU5XkAAAAJ&hl=en">Google Scholar profile</a>.</p>
+  </main>
+</body>
 </html>
