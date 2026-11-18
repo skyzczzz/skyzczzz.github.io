@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Travel | Chi Zhang</title>
+    <meta
+      name="description"
+      content="Places Chi Zhang has visited, and a wishlist for future travels."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="/assets/css/local-overrides.css" />
+    <link rel="stylesheet" href="/assets/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="/assets/css/travel.css" />
+    <script src="/assets/js/theme-toggle.js"></script>
+    <script defer src="/assets/vendor/leaflet/leaflet.js"></script>
+    <script defer src="/assets/js/travel.js"></script>
+  </head>
+  <body class="fixed-top-nav">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="container site-nav" aria-label="Main navigation">
+        <a class="site-name" href="/">Chi Zhang<span class="name-accent">.</span></a>
+        <div class="nav-links"><a href="/">About</a>
+<a href="/publications/">Publications</a>
+<a href="/news/">News</a>
+<a href="/travel/" aria-current="page">Travel</a>
+
+          <button id="light-toggle" type="button" aria-label="Dark theme" aria-pressed="false" hidden>
+            <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20.4 13.3A8.6 8.6 0 0 1 10.7 3.6 8.6 8.6 0 1 0 20.4 13.3Z"/></svg>
+            <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="container main-content" tabindex="-1">
+      <header class="travel-header">
+        <h1>Travel</h1>
+        <p class="desc">Places I’ve been, and places I hope to go. A little more of the world, one trip at a time.</p>
+        <dl id="travel-stats" class="travel-stats" hidden>
+          <div><dt>Places visited</dt><dd id="visited-count">0</dd></div>
+          <div><dt>Countries visited</dt><dd id="country-count">0</dd></div>
+          <div><dt>Planned trips</dt><dd id="planned-count">0</dd></div>
+          <div><dt>On my wishlist</dt><dd id="wishlist-count">0</dd></div>
+        </dl>
+      </header>
+      <section aria-label="Travel map and places">
+        <div class="travel-toolbar">
+          <div class="travel-filters" role="group" aria-label="Filter places">
+            <button type="button" data-travel-filter="all" aria-pressed="true" disabled>All places</button>
+            <button type="button" data-travel-filter="visited" aria-pressed="false" disabled>Visited</button>
+            <button type="button" data-travel-filter="planned" aria-pressed="false" disabled>Upcoming</button>
+            <button type="button" data-travel-filter="wishlist" aria-pressed="false" disabled>Wishlist</button>
+          </div>
+          <button id="map-reset" class="map-reset" type="button" hidden>Reset view</button>
+        </div>
+        <div class="map-frame">
+          <div id="travel-map" role="region" aria-label="Interactive travel map. Use the zoom controls or explore places in the list below."></div>
+          <div class="map-caption">
+            <div class="map-legend" aria-label="Map legend">
+              <span><i class="legend-dot" aria-hidden="true"></i>Visited</span>
+              <span><i class="legend-dot planned" aria-hidden="true"></i>Planned</span>
+              <span><i class="legend-dot wishlist" aria-hidden="true"></i>Wishlist</span>
+            </div>
+            <p>Select a pin or a place to explore.</p>
+          </div>
+        </div>
+        <p id="map-message" class="map-message" role="status" hidden></p>
+        <noscript><p class="map-message">Please enable JavaScript to explore the interactive map and travel list.</p></noscript>
+        <div class="travel-list-heading">
+          <div><h2>The travel list</h2><p id="travel-results" class="travel-results" role="status">Loading places…</p></div>
+          <label class="travel-search" for="place-search">Find a place
+            <input type="search" id="place-search" placeholder="City or country" autocomplete="off" disabled />
+          </label>
+        </div>
+        <ul id="place-list" class="place-list" aria-label="Places"></ul>
+        <p id="travel-empty" class="travel-empty" hidden></p>
+      </section>
+      <p class="travel-footer-note">A growing travel log, with more places to come. Regional pins are approximate; wishlist pins are possibilities, not confirmed plans.</p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container mt-0">
+        © Copyright 2026 Chi Zhang. Based on the
+        <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="external nofollow noopener">al-folio</a>
+        theme.
+      </div>
+    </footer>
+  </body>
+</html>

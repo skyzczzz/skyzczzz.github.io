@@ -134,3 +134,10 @@ h2.bibliography { font-family: Georgia, "Times New Roman", serif; font-size: 1.7
   .publications li, .news tr { break-inside: avoid; }
 }
 .contribution { display: inline-block; color: var(--muted); margin-left: .65rem; font-size: .875rem; }
+
+/* Keep the expanded navigation comfortable on narrow screens. */
+@media (max-width: 650px) {
+  .site-nav { flex-wrap: wrap; justify-content: center; gap: 0; padding-block: .65rem; }
+  .site-name { width: 100%; text-align: center; }
+  .nav-links { gap: .65rem; }
+}

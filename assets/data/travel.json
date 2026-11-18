@@ -1,0 +1,210 @@
+{
+  "version": 1,
+  "places": [
+    {
+      "id": "jiangsu",
+      "name": "Jiangsu",
+      "country": "China",
+      "status": "visited",
+      "lat": 32.9844,
+      "lng": 119.942,
+      "note": "Home base"
+    },
+    {
+      "id": "beijing",
+      "name": "Beijing",
+      "country": "China",
+      "status": "visited",
+      "lat": 39.9488,
+      "lng": 116.389
+    },
+    {
+      "id": "shandong",
+      "name": "Shandong",
+      "country": "China",
+      "status": "visited",
+      "lat": 36.3271,
+      "lng": 118.114
+    },
+    {
+      "id": "hubei",
+      "name": "Hubei",
+      "country": "China",
+      "status": "visited",
+      "lat": 30.9857,
+      "lng": 112.264
+    },
+    {
+      "id": "shanghai",
+      "name": "Shanghai",
+      "country": "China",
+      "status": "visited",
+      "lat": 31.0909,
+      "lng": 121.409
+    },
+    {
+      "id": "hebei",
+      "name": "Hebei",
+      "country": "China",
+      "status": "visited",
+      "lat": 38.5205,
+      "lng": 115.314
+    },
+    {
+      "id": "guangdong",
+      "name": "Guangdong",
+      "country": "China",
+      "status": "visited",
+      "lat": 23.7924,
+      "lng": 113.72
+    },
+    {
+      "id": "jiangxi",
+      "name": "Jiangxi",
+      "country": "China",
+      "status": "visited",
+      "lat": 27.6397,
+      "lng": 116.017
+    },
+    {
+      "id": "chongqing",
+      "name": "Chongqing",
+      "country": "China",
+      "status": "visited",
+      "lat": 30.0173,
+      "lng": 107.73
+    },
+    {
+      "id": "anhui",
+      "name": "Anhui",
+      "country": "China",
+      "status": "visited",
+      "lat": 31.9537,
+      "lng": 117.253
+    },
+    {
+      "id": "shanxi",
+      "name": "Shanxi",
+      "country": "China",
+      "status": "visited",
+      "lat": 37.7586,
+      "lng": 112.389
+    },
+    {
+      "id": "fujian",
+      "name": "Fujian",
+      "country": "China",
+      "status": "visited",
+      "lat": 26.408,
+      "lng": 118.178
+    },
+    {
+      "id": "zhejiang",
+      "name": "Zhejiang",
+      "country": "China",
+      "status": "visited",
+      "lat": 29.1084,
+      "lng": 119.97
+    },
+    {
+      "id": "jilin",
+      "name": "Jilin",
+      "country": "China",
+      "status": "visited",
+      "lat": 43.2978,
+      "lng": 126.466
+    },
+    {
+      "id": "hong-kong",
+      "name": "Hong Kong",
+      "country": "China",
+      "status": "visited",
+      "lat": 22.3069,
+      "lng": 114.1831
+    },
+    {
+      "id": "singapore",
+      "name": "Singapore",
+      "country": "Singapore",
+      "status": "visited",
+      "lat": 1.295,
+      "lng": 103.8539
+    },
+    {
+      "id": "rio-de-janeiro",
+      "name": "Rio de Janeiro",
+      "country": "Brazil",
+      "status": "visited",
+      "lat": -22.9231,
+      "lng": -43.227
+    },
+    {
+      "id": "panama-city",
+      "name": "Panama City",
+      "country": "Panama",
+      "status": "visited",
+      "lat": 8.97,
+      "lng": -79.535
+    },
+    {
+      "id": "colorado",
+      "name": "Colorado",
+      "country": "United States",
+      "status": "visited",
+      "lat": 38.9998,
+      "lng": -105.543
+    },
+    {
+      "id": "california",
+      "name": "California",
+      "country": "United States",
+      "status": "visited",
+      "lat": 36.7496,
+      "lng": -119.591
+    },
+    {
+      "id": "virginia",
+      "name": "Virginia",
+      "country": "United States",
+      "status": "visited",
+      "lat": 37.7403,
+      "lng": -78.2431
+    },
+    {
+      "id": "new-york",
+      "name": "New York",
+      "country": "United States",
+      "status": "visited",
+      "lat": 43.1988,
+      "lng": -75.3242
+    },
+    {
+      "id": "texas",
+      "name": "Texas",
+      "country": "United States",
+      "status": "visited",
+      "lat": 31.131,
+      "lng": -98.7607,
+      "note": "Home base II"
+    },
+    {
+      "id": "sydney",
+      "name": "Sydney",
+      "country": "Australia",
+      "status": "planned",
+      "lat": -33.9181,
+      "lng": 151.1832,
+      "when": "December 2026"
+    },
+    {
+      "id": "vienna",
+      "name": "Vienna",
+      "country": "Austria",
+      "status": "wishlist",
+      "lat": 48.202,
+      "lng": 16.3647,
+      "when": "2027",
+      "note": "Tentative."
+    }
+  ]
+}
