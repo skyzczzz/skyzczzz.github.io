@@ -1,77 +1,315 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Chi Zhang</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #f8f6f1;
-      --ink: #26221d;
-      --muted: #766d62;
-      --line: #ded6ca;
-      --link: #6f42c1;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Chi Zhang</title>
+    <meta
+      name="description"
+      content="Academic homepage for Chi Zhang, a computer science researcher at UT Austin interested in generative modeling, multimodal systems, and protein engineering."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="assets/css/local-overrides.css" />
+    <script src="assets/js/theme-toggle.js"></script>
+  </head>
+  <body class="fixed-top-nav">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="container site-nav" aria-label="Main navigation">
+        <a class="site-name" href="/">Chi Zhang<span class="name-accent">.</span></a>
+        <div class="nav-links"><a href="/" aria-current="page">About</a>
+<a href="/publications/">Publications</a>
+<a href="/news/">News</a>
 
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #171514;
-        --ink: #f4efe7;
-        --muted: #b8ad9f;
-        --line: #37302a;
-        --link: #b999ff;
-      }
-    }
+          <button id="light-toggle" type="button" aria-label="Dark theme" aria-pressed="false" hidden>
+            <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M20.4 13.3A8.6 8.6 0 0 1 10.7 3.6 8.6 8.6 0 1 0 20.4 13.3Z"/></svg>
+            <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+          </button>
+        </div>
+      </nav>
+    </header>
 
-    * {
-      box-sizing: border-box;
-    }
+    <main id="main" class="container main-content" tabindex="-1">
+      <div class="post">
+        <article>
+          <div class="page-intro">
+            <div class="page-intro-copy">
+              <header class="post-header">
+                <h1 class="post-title">Chi Zhang</h1>
+                <p class="desc">Ph.D. student in Computer Science, UT Austin</p>
+              </header>
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: ui-serif, Georgia, "Times New Roman", serif;
-      line-height: 1.55;
-    }
+              <p class="intro-lead">
+                I work on generative modeling, with growing interests in protein engineering and biomolecular modeling.
+              </p>
 
-    main {
-      width: min(680px, calc(100vw - 48px));
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 42px 0 46px;
-    }
+              <div class="social social-top" >
+                <div class="contact-icons">
 
-    h1 {
-      margin: 0 0 16px;
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 500;
-      letter-spacing: -0.03em;
-    }
+                  <a href="https://scholar.google.com/citations?user=5JMU5XkAAAAJ&hl=en" title="Google Scholar" rel="external nofollow noopener" target="_blank">Google Scholar</a>
+                  <a href="https://github.com/skyzczzz" title="GitHub" rel="external nofollow noopener" target="_blank">GitHub</a>
+                  <a href="https://www.linkedin.com/in/chi-zhang-9487572b5/" title="LinkedIn" rel="external nofollow noopener" target="_blank">LinkedIn</a>
+                </div>
+                <div class="contact-note">
+                  <a href="mailto:chizhang@cs.utexas.edu">chizhang@cs.utexas.edu</a>
+                </div>
+              </div>
+            </div>
 
-    p {
-      margin: 0 0 14px;
-      font-size: 1.12rem;
-      color: var(--muted);
-    }
+            <div class="profile intro-profile">
+              <figure>
+                <img src="/assets/img/profile-portrait.png" class="img-fluid z-depth-1 rounded" alt="Portrait of Chi Zhang" loading="eager" decoding="async" />
+              </figure>
+            </div>
+          </div>
 
-    a {
-      color: var(--link);
-      text-decoration-thickness: 0.08em;
-      text-underline-offset: 0.18em;
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>Chi Zhang</h1>
-    <p>This personal website is temporarily offline.</p>
-    <p>Please check back later, or reach me through my <a href="https://scholar.google.com/citations?user=5JMU5XkAAAAJ&hl=en">Google Scholar profile</a>.</p>
-  </main>
-</body>
+          <div class="bio-copy">
+            <h2 class="sr-only">About my research</h2>
+            <p>
+              I received my M.S. in
+              <a href="https://www.cs.utexas.edu/" rel="external nofollow noopener" target="_blank">Computer Science at UT Austin</a>
+              in May 2026. At UT, I worked with Prof.
+              <a href="https://www.cs.utexas.edu/~lqiang/" rel="external nofollow noopener" target="_blank">Qiang Liu</a>
+              on generative modeling, flow-based methods, and multimodal learning. I am now a Ph.D. student at UT Austin, where I am also exploring protein engineering and biomolecular modeling with Prof.
+              <a href="https://www.cs.utexas.edu/~klivans/" rel="external nofollow noopener" target="_blank">Adam Klivans</a>
+              and Dr. <a href="https://danny305.github.io/" rel="external nofollow noopener" target="_blank">Danny Diaz</a>.
+            </p>
+
+            <p>
+              I am primarily interested in generative modeling and in using machine learning to study and engineer proteins.
+              My recent work has also touched multimodal robustness, benchmark design, and efficient generation.
+
+            </p>
+
+            <ul>
+              <li>
+                <strong>Protein engineering and biomolecular modeling</strong>:
+                A newer direction in my research, especially around how generative methods can support protein engineering.
+              </li>
+              <li>
+                <strong>Generative modeling and flow methods</strong>:
+                <a href="https://arxiv.org/abs/2603.22216" rel="external nofollow noopener" target="_blank">Gumbel Distillation for Parallel Text Generation</a>
+                (ICLR 2026),
+                <a href="https://arxiv.org/abs/2602.20360" rel="external nofollow noopener" target="_blank">Momentum Guidance</a>
+                (ECCV 2026)
+              </li>
+              <li>
+                <strong>Multimodal reliability and evaluation</strong>:
+                <a href="https://arxiv.org/abs/2601.19202" rel="external nofollow noopener" target="_blank">Do Images Speak Louder than Words?</a>
+                (EACL 2026),
+                <a href="https://arxiv.org/pdf/2406.12638" rel="external nofollow noopener" target="_blank">Efficient and Long-tailed Generalization for Pre-trained Vision-Language Model</a>
+                (ACM KDD 2024)
+              </li>
+            </ul>
+
+            <p>
+              Before UT Austin, I received my B.S. in Computer Science from Nanjing University, where I worked with Prof.
+              <a href="https://cs.nju.edu.cn/liyf/" rel="external nofollow noopener" target="_blank">Yu-Feng Li</a>.
+              I have also worked on VLM reliability with Prof.
+              <a href="https://www.cs.utexas.edu/~mooney/" rel="external nofollow noopener" target="_blank">Raymond Mooney</a>.
+            </p>
+          </div>
+
+          <div class="section-heading"><h2>Recent news</h2><a href="/news/">All news</a></div>
+          <div class="news">
+            <div class="table-responsive">
+              <table class="table table-sm table-borderless">
+                <tr>
+                  <th scope="row" style="width: 20%">2026</th>
+                  <td>
+                    Our paper <strong>APEX: Anchored Protein Engineering</strong>
+                    was accepted to <strong>NeurIPS 2026</strong>.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" style="width: 20%">Jun 2026</th>
+                  <td>
+                    Our paper
+                    <a href="https://arxiv.org/abs/2602.20360" rel="external nofollow noopener" target="_blank">Momentum Guidance: Plug-and-Play Guidance for Flow Models</a>
+                    was accepted to <strong>ECCV 2026</strong>.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" style="width: 20%">May 2026</th>
+                  <td>
+                    Graduated from <strong>UT Austin</strong> with an M.S. in Computer Science.
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" style="width: 20%">Mar 2026</th>
+                  <td>
+                    <a href="https://openreview.net/submissions?venue=ICLR.cc%2F2026%2FWorkshop%2FGEM" rel="external nofollow noopener" target="_blank">Folding scFv–Antigen Complexes at Scale</a>
+                    was accepted to the ICLR 2026 GEM workshop.
+                  </td>
+                </tr>
+
+
+
+              </table>
+            </div>
+          </div>
+
+          <div class="section-heading"><h2>Selected publications</h2><a href="/publications/">All publications</a></div>
+          <div class="publications">
+            <p class="publication-note">My name is in bold. * denotes equal contribution.</p>
+            <ol class="bibliography">
+              <li>
+                <div class="row">
+                  <div class="col-sm-2 preview">
+                    <figure>
+                      <img src="/assets/img/publication_preview/gumbel.png" class="preview z-depth-1 rounded" alt="Gumbel publication preview" loading="lazy" decoding="async" />
+                    </figure>
+                  </div>
+                  <div id="gumbel2026" class="col-sm-8">
+                    <h3 class="title">Gumbel Distillation for Parallel Text Generation</h3>
+                    <div class="author">
+                      <strong>Chi Zhang</strong>, X. Hu, B. Liu, and Q. Liu
+                    </div>
+                    <div class="periodical"><em>ICLR</em>, 2026 <span class="contribution">First author</span></div>
+                    <div class="links">
+                      <a
+                        href="https://arxiv.org/abs/2603.22216"
+                        class="btn btn-sm z-depth-0"
+
+                        rel="external nofollow noopener"
+                        target="_blank"
+                      >Paper</a>
+                      <a
+                        href="https://github.com/hxixixh/gumbel-distill"
+                        class="btn btn-sm z-depth-0"
+
+                        rel="external nofollow noopener"
+                        target="_blank"
+                      >Code</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-sm-2 preview">
+                    <figure>
+                      <img src="/assets/img/publication_preview/context-vqa.png" class="preview z-depth-1 rounded" alt="Context-VQA publication preview" loading="lazy" decoding="async" />
+                    </figure>
+                  </div>
+                  <div id="contextvqa2026" class="col-sm-8">
+                    <h3 class="title">Do Images Speak Louder than Words? Investigating the Effect of Textual Misinformation in Vision-Language Models</h3>
+                    <div class="author">
+                      <strong>Chi Zhang</strong>, W. Ding, J. Liu, M. Wu, Q. Wu, and R. Mooney
+                    </div>
+                    <div class="periodical"><em>EACL Main</em>, 2026 <span class="contribution">First author</span></div>
+                    <div class="links">
+                      <a
+                        href="https://arxiv.org/abs/2601.19202"
+                        class="btn btn-sm z-depth-0"
+
+                        rel="external nofollow noopener"
+                        target="_blank"
+                      >Paper</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-sm-2 preview">
+                    <figure>
+                      <img src="/assets/img/publication_preview/scfv-paper.png" class="preview z-depth-1 rounded" alt="scFv publication preview" loading="lazy" decoding="async" />
+                    </figure>
+                  </div>
+                  <div id="scfv2026" class="col-sm-8">
+                    <h3 class="title">Folding scFv–Antigen Complexes at Scale</h3>
+                    <div class="author">
+                      Ravi Shah, Jeffrey Ouyang-Zhang, Zachary Cohen, Maria Rosaria Briglia,
+                      <strong>Chi Zhang</strong>, Adam Klivans, and Daniel Jesus Diaz
+                    </div>
+                    <div class="periodical">
+                      <em>ICLR 2026 Workshop on Generative and Experimental Perspectives for Biomolecular Design</em>, 2026
+                    </div>
+                    <div class="links">
+                      <a
+                        href="https://openreview.net/submissions?venue=ICLR.cc%2F2026%2FWorkshop%2FGEM"
+                        class="btn btn-sm z-depth-0"
+
+                        rel="external nofollow noopener"
+                        target="_blank"
+                      >OpenReview</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-sm-2 preview">
+                    <figure>
+                      <img src="/assets/img/publication_preview/dom.png" class="preview z-depth-1 rounded" alt="Divide Optimize Merge publication preview" loading="lazy" decoding="async" />
+                    </figure>
+                  </div>
+                  <div id="dom2025" class="col-sm-8">
+                    <h3 class="title">Divide, Optimize, Merge: Fine-Grained LLM Agent Optimization at Scale</h3>
+                    <div class="author">
+                      J. Liu, Y. Zeng, S. Zhang, <strong>Chi Zhang</strong>, M. Højmark-Bertelsen, M. N. Gadeberg, H. Wang, and Q. Wu
+                    </div>
+                    <div class="periodical"><em>EMNLP Findings</em>, 2025</div>
+                    <div class="links">
+                      <a
+                        href="https://arxiv.org/abs/2505.03973"
+                        class="btn btn-sm z-depth-0"
+
+                        rel="external nofollow noopener"
+                        target="_blank"
+                      >Paper</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-sm-2 preview">
+                    <figure>
+                      <img src="/assets/img/publication_preview/candle.png" class="preview z-depth-1 rounded" alt="CANDLE publication preview" loading="lazy" decoding="async" />
+                    </figure>
+                  </div>
+                  <div id="candle2024" class="col-sm-8">
+                    <h3 class="title">Efficient and Long-tailed Generalization for Pre-trained Vision-Language Model</h3>
+                    <div class="author">
+                      J. X. Shi*, <strong>Chi Zhang*</strong>, T. Wei, and Y. F. Li
+                    </div>
+                    <div class="periodical"><em>ACM KDD</em>, 2024 <span class="contribution">Co-first author</span></div>
+                    <div class="links">
+                      <a
+                        href="https://arxiv.org/pdf/2406.12638"
+                        class="btn btn-sm z-depth-0"
+
+                        rel="external nofollow noopener"
+                        target="_blank"
+                      >Paper</a>
+                      <a
+                        href="https://github.com/shijxcs/Candle"
+                        class="btn btn-sm z-depth-0"
+
+                        rel="external nofollow noopener"
+                        target="_blank"
+                      >Code</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container mt-0">
+        © Copyright 2026 Chi Zhang. Based on the
+        <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="external nofollow noopener">al-folio</a>
+        theme.
+      </div>
+    </footer>
+  </body>
 </html>
