@@ -39,24 +39,9 @@
     <main id="main" class="container main-content" tabindex="-1">
       <header class="travel-header">
         <h1>Travel</h1>
-        <p class="desc">Places I’ve been, and places I hope to go. A little more of the world, one trip at a time.</p>
-        <dl id="travel-stats" class="travel-stats" hidden>
-          <div><dt>Places visited</dt><dd id="visited-count">0</dd></div>
-          <div><dt>Countries visited</dt><dd id="country-count">0</dd></div>
-          <div><dt>Planned trips</dt><dd id="planned-count">0</dd></div>
-          <div><dt>On my wishlist</dt><dd id="wishlist-count">0</dd></div>
-        </dl>
+        <p class="desc">Places I’ve been, and places ahead.</p>
       </header>
       <section aria-label="Travel map and places">
-        <div class="travel-toolbar">
-          <div class="travel-filters" role="group" aria-label="Filter places">
-            <button type="button" data-travel-filter="all" aria-pressed="true" disabled>All places</button>
-            <button type="button" data-travel-filter="visited" aria-pressed="false" disabled>Visited</button>
-            <button type="button" data-travel-filter="planned" aria-pressed="false" disabled>Upcoming</button>
-            <button type="button" data-travel-filter="wishlist" aria-pressed="false" disabled>Wishlist</button>
-          </div>
-          <button id="map-reset" class="map-reset" type="button" hidden>Reset view</button>
-        </div>
         <div class="map-frame">
           <div id="travel-map" role="region" aria-label="Interactive travel map. Use the zoom controls or explore places in the list below."></div>
           <div class="map-caption">
@@ -65,21 +50,23 @@
               <span><i class="legend-dot planned" aria-hidden="true"></i>Planned</span>
               <span><i class="legend-dot wishlist" aria-hidden="true"></i>Wishlist</span>
             </div>
-            <p>Select a pin or a place to explore.</p>
+            <button id="map-reset" class="map-reset" type="button" hidden>World view</button>
           </div>
         </div>
         <p id="map-message" class="map-message" role="status" hidden></p>
         <noscript><p class="map-message">Please enable JavaScript to explore the interactive map and travel list.</p></noscript>
-        <div class="travel-list-heading">
-          <div><h2>The travel list</h2><p id="travel-results" class="travel-results" role="status">Loading places…</p></div>
-          <label class="travel-search" for="place-search">Find a place
-            <input type="search" id="place-search" placeholder="City or country" autocomplete="off" disabled />
-          </label>
-        </div>
-        <ul id="place-list" class="place-list" aria-label="Places"></ul>
-        <p id="travel-empty" class="travel-empty" hidden></p>
+        <p id="travel-results" class="sr-only" role="status">Loading places…</p>
+        <section class="travel-section" aria-labelledby="visited-heading">
+          <h2 id="visited-heading">Visited</h2>
+          <div id="place-list" class="place-groups"></div>
+        </section>
+        <section id="upcoming-section" class="travel-section" aria-labelledby="upcoming-heading" hidden>
+          <h2 id="upcoming-heading">Places ahead</h2>
+          <ul id="upcoming-list" class="upcoming-list"></ul>
+        </section>
+        <p id="travel-empty" class="travel-empty" hidden>No places added yet.</p>
       </section>
-      <p class="travel-footer-note">A growing travel log, with more places to come. Regional pins are approximate; wishlist pins are possibilities, not confirmed plans.</p>
+      <p class="travel-footer-note">Province and state pins are approximate.</p>
     </main>
 
     <footer class="site-footer">

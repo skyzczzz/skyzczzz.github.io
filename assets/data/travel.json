@@ -188,6 +188,14 @@
       "note": "Home base II"
     },
     {
+      "id": "washington-dc",
+      "name": "Washington, DC",
+      "country": "United States",
+      "status": "visited",
+      "lat": 38.9015,
+      "lng": -77.0114
+    },
+    {
       "id": "sydney",
       "name": "Sydney",
       "country": "Australia",

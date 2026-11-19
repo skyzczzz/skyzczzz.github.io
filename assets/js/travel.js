@@ -4,8 +4,7 @@
   const list = $('place-list');
   const result = $('travel-results');
   const message = $('map-message');
-  const filters = [...document.querySelectorAll('[data-travel-filter]')];
-  let places = [], visible = [], filter = 'all', map, markers;
+  let places = [], visible = [], map, markers;
   const markerById = new Map();
   const label = (status) => ({visited: 'Visited', planned: 'Planned trip', wishlist: 'Wishlist'})[status];
   const text = (tag, content, className) => {
@@ -34,15 +33,21 @@
     const close = $('travel-map').querySelector('.leaflet-popup-close-button');
     close?.focus({preventScroll: true});
   };
+  const placeButton = (p) => {
+    if (!map) return text('span', p.name);
+    const button = text('button', p.name, 'place-button');
+    button.type = 'button';
+    button.setAttribute('aria-label', `Show ${p.name}, ${p.country} on map`);
+    button.addEventListener('click', () => showPlace(p));
+    return button;
+  };
   function render() {
-    const query = $('place-search').value.trim().toLocaleLowerCase();
-    visible = places.filter((p) => (filter === 'all' || p.status === filter)
-      && `${p.name} ${p.country} ${p.note || ''} ${p.when || ''}`.toLocaleLowerCase().includes(query));
-    filters.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.travelFilter === filter)));
+    visible = places;
     list.replaceChildren();
+    $('upcoming-list').replaceChildren();
     markers?.clearLayers();
     markerById.clear();
-    for (const p of visible) {
+    for (const p of places) {
       if (map) {
         const popup = document.createElement('div');
         popup.append(text('span', label(p.status), `place-status ${p.status}`), text('h3', p.name), text('p', p.country));
@@ -57,25 +62,36 @@
         }).addTo(markers).bindPopup(popup, {maxWidth: 280});
         markerById.set(p.id, marker);
       }
-      const item = document.createElement('li');
-      item.className = 'place-card';
-      item.append(text('span', label(p.status), `place-status ${p.status}`));
-      const heading = text('h3', '');
-      if (map) {
-        const button = text('button', p.name, 'place-button');
-        button.type = 'button';
-        button.setAttribute('aria-label', `Show ${p.name}, ${p.country} on map`);
-        button.addEventListener('click', () => showPlace(p));
-        heading.append(button);
-      } else heading.textContent = p.name;
-      item.append(heading, text('p', p.country, 'place-country'));
-      if (p.when) item.append(text('p', p.when, 'place-when'));
-      if (p.note) item.append(text('p', p.note, 'place-note'));
-      list.append(item);
     }
-    result.textContent = `${visible.length} ${visible.length === 1 ? 'place' : 'places'} shown`;
-    $('travel-empty').hidden = visible.length > 0;
-    $('travel-empty').textContent = places.length ? 'No places match this view. Try another filter or search.' : 'The travel log is just getting started. More places to come.';
+    const visited = places.filter((p) => p.status === 'visited');
+    const countries = [...new Set(visited.map((p) => p.country))];
+    for (const country of countries) {
+      const group = document.createElement('section');
+      group.className = 'place-group';
+      group.append(text('h3', country));
+      const entries = document.createElement('ul');
+      entries.className = 'place-names';
+      for (const p of visited.filter((p) => p.country === country)) {
+        const item = document.createElement('li');
+        item.append(placeButton(p));
+        if (p.note || p.when) item.append(text('span', ` (${[p.note, p.when].filter(Boolean).join(', ')})`, 'place-detail'));
+        entries.append(item);
+      }
+      group.append(entries);
+      list.append(group);
+    }
+    const upcoming = places.filter((p) => p.status !== 'visited');
+    $('upcoming-section').hidden = upcoming.length === 0;
+    for (const p of upcoming) {
+      const item = document.createElement('li');
+      const destination = text('div', '', 'upcoming-place');
+      destination.append(placeButton(p), text('span', `, ${p.country}`, 'place-detail'));
+      const details = [p.when, p.note || label(p.status)].filter(Boolean).join(' · ');
+      item.append(destination, text('p', details, 'place-detail'));
+      $('upcoming-list').append(item);
+    }
+    result.textContent = `${visited.length} visited places and ${upcoming.length} future destinations.`;
+    $('travel-empty').hidden = places.length > 0;
     framePlaces();
   }
   async function init() {
@@ -86,12 +102,6 @@
       if (data.version !== 1 || !Array.isArray(data.places) || !data.places.every(validPlace)
           || new Set(data.places.map((p) => p.id)).size !== data.places.length) throw new Error('Invalid travel data');
       places = data.places;
-      const visited = places.filter((p) => p.status === 'visited');
-      $('visited-count').textContent = visited.length;
-      $('country-count').textContent = new Set(visited.map((p) => p.country)).size;
-      $('planned-count').textContent = places.filter((p) => p.status === 'planned').length;
-      $('wishlist-count').textContent = places.filter((p) => p.status === 'wishlist').length;
-      $('travel-stats').hidden = false;
       if (typeof L !== 'undefined') {
         try {
           map = L.map('travel-map', {scrollWheelZoom: false, minZoom: 0, zoomSnap: 0.25, maxZoom: 12, maxBounds: [[-85, -180], [85, 180]], maxBoundsViscosity: 1}).setView([22, 0], 2);
@@ -118,7 +128,7 @@
           });
           resize.observe($('travel-map'));
           $('map-reset').hidden = false;
-          $('map-reset').addEventListener('click', framePlaces);
+          $('map-reset').addEventListener('click', () => { map.closePopup(); framePlaces(); });
         } catch (_) { map = null; }
       }
       if (!map) {
@@ -126,12 +136,6 @@
         message.textContent = 'The map is unavailable right now. All places are listed below.';
         message.hidden = false;
       }
-      filters.forEach((button) => {
-        button.disabled = false;
-        button.addEventListener('click', () => { filter = button.dataset.travelFilter; render(); });
-      });
-      $('place-search').disabled = false;
-      $('place-search').addEventListener('input', render);
       render();
     } catch (_) {
       $('travel-map').hidden = true;
